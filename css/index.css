@@ -1,3 +1,4 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +14,7 @@ body {
     min-height: 100vh;
 }
 
+/* Barra de navegación */
 header {
     display: flex;
     justify-content: space-between;
@@ -61,6 +63,7 @@ header {
     background-color: #065f46;
 }
 
+/* Contenido principal */
 main {
     text-align: center;
     padding: 80px 20px;
@@ -85,6 +88,7 @@ p {
     color: #374151;
 }
 
+/* Funcionalidades */
 .funcionalidades {
     padding: 0px 20px;
     text-align: center;
@@ -139,6 +143,7 @@ p {
     color: #374151;
 }
 
+/* Footer */
 footer {
     background-color: #1f2937;
     text-align: center;

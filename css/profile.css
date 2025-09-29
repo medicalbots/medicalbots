@@ -1,0 +1,252 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f8fafc;
+    color: #333;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.header .back {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #555;
+}
+
+.user-info h2 {
+    margin: 0;
+    color: #059669;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    padding: 1.5rem;
+    gap: 1.5rem;
+}
+
+/* Sidebar */
+.sidebar {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 220px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar button {
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.sidebar button.active {
+    background: #d1fae5;
+    color: #059669;
+    font-weight: bold;
+}
+
+/* Content */
+.content {
+    flex: 1;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.content h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+label {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    display: block;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+h4 {
+    margin: 1.5rem 0 0.5rem 0;
+}
+
+/* Botón */
+.save-btn {
+    background: #059669;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    align-self: flex-start;
+}
+
+.save-btn:hover {
+    background: #047857;
+}
+
+/* Tags (etiquetas de alergias, medicamentos, etc.) */
+.tag-input {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.tag-input input {
+    flex: 1;
+}
+
+.tag-input button {
+    background: #059669;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    width: 36px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 0.7rem;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.tag.red {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.tag.blue {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.tag.orange {
+    background: #ffedd5;
+    color: #c2410c;
+}
+
+/* --- Actividad --- */
+.cards {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.card {
+    flex: 1;
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.icon.blue {
+    color: #2563eb;
+}
+
+.icon.orange {
+    color: #f97316;
+}
+
+.icon.purple {
+    color: #9333ea;
+}
+
+.info-box {
+    background: #ecfdf5;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.info-box .score {
+    float: right;
+    color: #059669;
+    font-weight: bold;
+}
+
+.progress-bar {
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 6px;
+    margin: 0.5rem 0;
+}
+
+.progress {
+    height: 100%;
+    background: #059669;
+    border-radius: 6px;
+}

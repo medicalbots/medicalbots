@@ -1,6 +1,7 @@
 const tabs = document.querySelectorAll(".tab");
 const forms = document.querySelectorAll(".formulario");
 
+// Activar pestaña según parámetro de la URL
 document.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
     const tabParam = params.get("tab");
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+// Alternar entre login y registro
 tabs.forEach(tab => {
     tab.addEventListener("click", () => {
         tabs.forEach(t => t.classList.remove("active"));
@@ -26,6 +28,7 @@ tabs.forEach(tab => {
     });
 });
 
+// Mostrar/ocultar contraseña
 document.querySelectorAll(".toggle-password").forEach(toggle => {
     toggle.addEventListener("click", () => {
         const targetId = toggle.getAttribute("data-target");
@@ -40,6 +43,7 @@ document.querySelectorAll(".toggle-password").forEach(toggle => {
     });
 });
 
+// Registro de usuario
 document.querySelector("#register .btn-login").addEventListener("click", async (e) => {
     e.preventDefault();
     const nombre = document.getElementById("nombre").value.trim();
@@ -60,11 +64,13 @@ document.querySelector("#register .btn-login").addEventListener("click", async (
     const data = await res.json();
     alert(data.message);
     if (data.success) {
+        // Cambiar a pestaña login automáticamente
         document.querySelector('.tab[data-tab="login"]').click();
         document.getElementById("email").value = email;
     }
 });
 
+// Login de usuario
 document.querySelector("#login .btn-login").addEventListener("click", async (e) => {
     e.preventDefault();
     const email = document.getElementById("email").value.trim();
@@ -83,6 +89,7 @@ document.querySelector("#login .btn-login").addEventListener("click", async (e) 
     const data = await res.json();
     if (data.success) {
         alert("Bienvenido, " + data.nombre);
+        // Redirigir a lobby.html o página principal
         window.location.href = "lobby.html";
     } else {
         alert(data.message);
