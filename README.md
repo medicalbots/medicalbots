@@ -17,7 +17,7 @@ La plataforma web ofrecerá al usuario:
 - **Backend:** PHP 8.x.
 - **Base de Datos:** MySQL 8.x.
 - **Servidor Web:** Apache (XAMPP o LAMP).
-- **IA:** Google Gemini API.
+- **IA:** Google Gemini API, Google Maps API.
 ## Instalación del proyecto
 Descarga nuestro proyecto en
 
