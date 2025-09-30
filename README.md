@@ -1,6 +1,6 @@
 ﻿# Asistente virtual médico – MedicalBots
 
-![](Aspose.Words.207067e8-7dbe-4d25-856e-b5b4ef147c95.001.jpeg)
+![](images/MedicalBots.png)
 
 ## Descripción
 Este proyecto consiste en una plataforma web que busca ayudar y conectar a los usuarios con el cuidado de su salud a través de un modelo de asistencia inteligente brindando información acerca de temas relacionado con la salud.
@@ -86,7 +86,7 @@ composer require phpmailer/phpmailer
 
 4. Aquí está la salida de Composer para la instalación de php\_mailer:
 
-![](Aspose.Words.207067e8-7dbe-4d25-856e-b5b4ef147c95.002.png)
+![](images/Aspose.Words.207067e8-7dbe-4d25-856e-b5b4ef147c95.002.png)
 
 5. Aquí no hay nada que recargar normalmente. Es en el [script](https://kb.n0c.com/en/glossaire/script/) donde debemos indicar la ruta a PHPMailer:
 

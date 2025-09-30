@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil</title>
+    <link rel="stylesheet" href="/css/profile.css">
+</head>
+
+<body>
+    <header class="header">
+            <a href="lobby.html" class="back">&larr; Volver</a>
+        <div class="user-info">
+            <div class="avatar"></div>
+            <div>
+                <h2>Mi Perfil</h2>
+                <p>...</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <aside class="sidebar">
+            <button data-target="personal" onclick="mostrarSeccion('personal')">Información Personal</button>
+            <button data-target="medica" onclick="mostrarSeccion('medica')">Información Médica</button>
+            <button data-target="actividad" onclick="mostrarSeccion('actividad')">Actividad</button>
+        </aside>
+
+        <section id="personal" class="content">
+            <h3>Información Personal</h3>
+            <form>
+                <div class="form-grid">
+                    <div>
+                        <label>Nombre completo</label>
+                        <input type="text" value="...">
+                    </div>
+                    <div>
+                        <label>Correo electronico</label>
+                        <input type="text" value="...">
+                    </div>
+                    <div>
+                        <label>Teléfono</label>
+                        <input type="text" value="8888 8888">
+                    </div>
+                </div>
+                <div class="form-grid">
+                    <div>
+                        <label>Fecha de nacimiento</label>
+                        <input type="date" value="01/01/2000">
+                    </div>
+                    <div>
+                        <label>Género</label>
+                        <select>
+                            <option selected>Femenino</option>
+                            <option>Masculino</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label>Dirección</label>
+                    <input type="text" value="...">
+                </div>
+                <h4>Contacto de Emergencia</h4>
+                <div class="form-grid">
+                    <div>
+                        <label>Nombre</label>
+                        <input type="text" value=".">
+                    </div>
+                    <div>
+                        <label>Teléfono</label>
+                        <input type="text" value=".">
+                    </div>
+                    <div>
+                        <label>Relación</label>
+                        <input type="text" value=".">
+                    </div>
+                </div>
+                <button type="submit" class="save-btn">Guardar Cambios</button>
+            </form>
+        </section>
+
+        <section id="medica" class="content" style="display:none;">
+            <h3>Información Médica</h3>
+            <form>
+                <div class="form-grid">
+                    <div>
+                        <label>Tipo de sangre</label>
+                        <select>
+                            <option selected>O+</option>
+                            <option>O-</option>
+                            <option>A+</option>
+                            <option>A-</option>
+                            <option>B+</option>
+                            <option>B-</option>
+                            <option>AB+</option>
+                            <option>AB-</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Altura (cm)</label>
+                        <input type="number" value="165">
+                    </div>
+                    <div>
+                        <label>Peso (kg)</label>
+                        <input type="number" value="60">
+                    </div>
+                </div>
+
+                <div>
+                    <label>Alergias</label>
+                    <div class="tag-input">
+                        <input type="text" placeholder="Agregar alergia...">
+                        <button type="button">+</button>
+                    </div>
+                    <div class="tags">
+                        <span class="tag red">Polen ✕</span>
+                        <span class="tag red">Mariscos ✕</span>
+                    </div>
+                </div>
+
+                <div>
+                    <label>Medicamentos actuales</label>
+                    <div class="tag-input">
+                        <input type="text" placeholder="Agregar medicamento...">
+                        <button type="button">+</button>
+                    </div>
+                    <div class="tags">
+                        <span class="tag blue">Vitamina D ✕</span>
+                        <span class="tag blue">Omega 3 ✕</span>
+                    </div>
+                </div>
+
+                <div>
+                    <label>Condiciones médicas</label>
+                    <div class="tag-input">
+                        <input type="text" placeholder="Agregar condición...">
+                        <button type="button">+</button>
+                    </div>
+                    <div class="tags">
+                        <span class="tag orange">Hipertensión leve ✕</span>
+                    </div>
+                </div>
+
+                <h4>Información del Seguro</h4>
+                <div class="form-grid">
+                    <div>
+                        <label>Proveedor de seguro</label>
+                        <input type="text" value="Seguro Nacional de Salud">
+                    </div>
+                    <div>
+                        <label>Número de póliza</label>
+                        <input type="text" value="SNS-123456789">
+                    </div>
+                </div>
+
+                <h4>Médico de Cabecera</h4>
+                <div class="form-grid">
+                    <div>
+                        <label>Nombre</label>
+                        <input type="text" value="Dr. Carlos Mendoza">
+                    </div>
+                    <div>
+                        <label>Teléfono</label>
+                        <input type="text" value="+1 234-567-8902">
+                    </div>
+                    <div>
+                        <label>Especialidad</label>
+                        <input type="text" value="Medicina General">
+                    </div>
+                </div>
+                <button type="submit" class="save-btn">Guardar Cambios</button>
+            </form>
+        </section>
+
+        <section id="actividad" class="content" style="display:none;">
+            <h3>Resumen de Actividad</h3>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="icon blue">💬</div>
+                    <h2>24</h2>
+                    <p>Consultas IA</p>
+                </div>
+                <div class="card">
+                    <div class="icon orange">🛡️</div>
+                    <h2>8</h2>
+                    <p>Evaluaciones</p>
+                </div>
+                <div class="card">
+                    <div class="icon purple">📅</div>
+                    <h2>3</h2>
+                    <p>Eventos Asistidos</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <p><strong>🕒 Último acceso</strong><br>viernes, 19 de septiembre de 2025, 09:53</p>
+            </div>
+
+            <div class="info-box">
+                <p><strong>Puntuación de Salud</strong> <span class="score">85/100</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width:85%"></div>
+                </div>
+                <small>Basado en tu actividad y uso de la plataforma. ¡Sigue así!</small>
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/profile.js"></script>
+</body>
+
+</html>
