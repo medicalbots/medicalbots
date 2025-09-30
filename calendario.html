@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario</title>
+    <link rel="stylesheet" href="/css/calendario.css">
+    <link rel="stylesheet" href="/css/lobby.css">
+</head>
+
+<body>
+    <!-- Topbar -->
+    <header class="topbar">
+        <button id="toggle-btn" class="toggle-btn">☰</button>
+        <div class="topbar-scroll">
+            <div class="topbar-text" style="flex:1; display:flex; justify-content:center; align-items:center;">
+                <span class="title solo-pc">Asistente de Salud MedicalBots</span>
+            </div>
+            <div class="user-info" style="display:flex; justify-content:flex-end; align-items:center;">
+                <div class="profile-container">
+                    <div class="profile-details">
+                        <span class="profile-name">Rothman Moises Garibo Picado</span>
+                        <span class="profile-email">garibopicadorothmanmoises@gmail.com</span>
+                    </div>
+                    <img src="images/MedicalBots.png" alt="Perfil" class="profile-img" id="profile-img"
+                        style="width:40px;height:40px;border-radius:50%;cursor:pointer;">
+                    <div class="profile-menu" id="profile-menu">
+                        <a href="profile.html" class="menu-item">Perfil</a>
+                        <a href="configure.html" class="menu-item" id="configuracion-menu">Configuración</a>
+                        <a href="login.html" class="menu-item" id="cerrar-sesion-menu">Cerrar sesión</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar (oculto por defecto) -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <a href="lobby.html">Inicio</a>
+            <a href="chatbot.html">Chatbot</a>
+            <a href="calendario.html">Eventos</a>
+            <a href="preclasificacion.html">Preclasificación</a>
+            <a href="unidad-cercana.html">Unidad Cercana</a>
+            <a href="historial.html">Mi Actividad</a>
+        </nav>
+    </aside>
+
+    <!-- 📅 Contenedor del calendario -->
+    <div class="calendario-container">
+        <h1>Calendario de Jornadas de Salud en Nicaragua</h1>
+        <div id="calendario"></div>
+    </div>
+
+    <script src="/js/calendario.js"></script>
+    <script src="js/lobby.js"></script>
+</body>
+
+</html>
