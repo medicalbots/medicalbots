@@ -21,14 +21,12 @@
     </header>
 
     <main class="container">
-        <!-- Barra lateral -->
         <aside class="sidebar">
             <button data-target="personal" onclick="mostrarSeccion('personal')">Información Personal</button>
             <button data-target="medica" onclick="mostrarSeccion('medica')">Información Médica</button>
             <button data-target="actividad" onclick="mostrarSeccion('actividad')">Actividad</button>
         </aside>
 
-        <!-- Sección Información Personal -->
         <section id="personal" class="content">
             <h3>Información Personal</h3>
             <form>
@@ -45,17 +43,13 @@
                 <div class="form-grid">
                     <div>
                         <label>Correo electrónico</label>
-                        <input type="text" value="garibopicadorothmanmoises@gmail.com">
-                    </div>
-                    <div>
-                        <label>Teléfono</label>
-                        <input type="text" value="0000 0000">
+                        <input type="email" value="garibopicadorothmanmoises@gmail.com">
                     </div>
                 </div>
                 <div class="form-grid">
                     <div>
                         <label>Cédula</label>
-                        <input type="text" value="">
+                        <input type="text" id="cedula" name="cedula" placeholder="123-123456-1234A" maxlength="16" pattern="\d{3}-\d{6}-\d{4}[A-Za-z]" title="Formato: 123-123456-1234A">
                     </div>
                     <div>
                         <label>Fecha de nacimiento</label>
@@ -90,7 +84,6 @@
             </form>
         </section>
 
-        <!-- Sección Información Médica -->
         <section id="medica" class="content" style="display:none;">
             <h3>Información Médica</h3>
             <form>
@@ -184,7 +177,6 @@
             </form>
         </section>
 
-        <!-- Sección Actividad -->
         <section id="actividad" class="content" style="display:none;">
             <h3>Resumen de Actividad</h3>
 
@@ -221,6 +213,28 @@
     </main>
 
     <script src="/js/profile.js"></script>
+</body>
+<script>
+// Validación estricta en tiempo real para el campo de cédula (formato: 123-123456-1234A)
+document.addEventListener('DOMContentLoaded', function() {
+    const cedulaInput = document.getElementById('cedula');
+    if (cedulaInput) {
+        cedulaInput.addEventListener('input', function(e) {
+            let value = cedulaInput.value.replace(/[^\dA-Za-z]/g, '');
+            let bloque1 = value.substring(0, 3).replace(/[^\d]/g, '');
+            let bloque2 = value.substring(3, 9).replace(/[^\d]/g, '');
+            let bloque3 = value.substring(9, 13).replace(/[^\d]/g, '');
+            let letra = value.substring(13, 14).replace(/[^A-Za-z]/g, '').toUpperCase();
+            let formatted = '';
+            if (bloque1.length > 0) formatted += bloque1;
+            if (bloque2.length > 0) formatted += '-' + bloque2;
+            if (bloque3.length > 0) formatted += '-' + bloque3;
+            if (letra.length > 0) formatted += letra;
+            cedulaInput.value = formatted;
+        });
+    }
+});
+</script>
 </body>
 
 </html>
