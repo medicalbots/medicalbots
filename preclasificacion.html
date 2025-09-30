@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preclasificación de Enfermedades</title>
+    <link rel="stylesheet" href="css/preclasificacion.css">
+    <link rel="stylesheet" href="/css/lobby.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <button id="toggle-btn" class="toggle-btn">☰</button>
+        <div class="topbar-scroll">
+            <div class="topbar-text" style="flex:1; display:flex; justify-content:center; align-items:center;">
+                <span class="title solo-pc">Asistente de Salud MedicalBots</span>
+            </div>
+            <div class="user-info" style="display:flex; justify-content:flex-end; align-items:center;">
+                <div class="profile-container">
+                    <div class="profile-details">
+                        <span class="profile-name">Rothman Moises Garibo Picado</span>
+                        <span class="profile-email">garibopicadorothmanmoises@gmail.com</span>
+                    </div>
+                    <img src="images/MedicalBots.png" alt="Perfil" class="profile-img" id="profile-img"
+                        style="width:40px;height:40px;border-radius:50%;cursor:pointer;">
+                    <div class="profile-menu" id="profile-menu">
+                        <a href="profile.html" class="menu-item">Perfil</a>
+                        <a href="configure.html" class="menu-item" id="configuracion-menu">Configuración</a>
+                        <a href="login.html" class="menu-item" id="cerrar-sesion-menu">Cerrar sesión</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar (oculto por defecto) -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <a href="lobby.html">Inicio</a>
+            <a href="chatbot.html">Chatbot</a>
+            <a href="calendario.html">Eventos</a>
+            <a href="informacion.html">Información</a>
+            <a href="preclasificacion.html">Preclasificación</a>
+            <a href="unidad-cercana.html">Unidad Cercana</a>
+            <a href="historial.html">Mi Actividad</a>
+        </nav>
+    </aside>
+
+    <div class="container">
+        <div class="preclasificacion-header">
+            <div class="icon-title">
+                <span class="shield-icon">🛡️</span>
+                <h1>Preclasificación de Enfermedades</h1>
+            </div>
+            <p class="subtitle">Evaluación preliminar basada en síntomas para orientación médica</p>
+        </div>
+        <section class="info-paciente card">
+            <h2>Información del Paciente</h2>
+            <div class="info-fields">
+                <div class="field">
+                    <label for="edad">Edad</label>
+                    <input type="number" id="edad" placeholder="Ej: 35">
+                </div>
+                <div class="field">
+                    <label for="genero">Género</label>
+                    <select id="genero">
+                        <option value="">Seleccionar</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                    </select>
+                </div>
+            </div>
+            <div class="field full-width">
+                <label for="historial">Historial Médico</label>
+                <textarea id="historial" placeholder="Enfermedades previas, cirugías, etc."></textarea>
+            </div>
+        </section>
+        <section class="sintomas card">
+            <h2>Síntomas</h2>
+            <div class="sintomas-comunes">
+                <label>Síntomas Comunes</label>
+                <div class="sintomas-lista">
+                    <button type="button" class="sintoma-btn">+ Fiebre</button>
+                    <button type="button" class="sintoma-btn">+ Dolor de cabeza</button>
+                    <button type="button" class="sintoma-btn">+ Tos</button>
+                    <button type="button" class="sintoma-btn">+ Dolor de garganta</button>
+                    <button type="button" class="sintoma-btn">+ Fatiga</button>
+                    <button type="button" class="sintoma-btn">+ Náuseas</button>
+                    <button type="button" class="sintoma-btn">+ Vómito</button>
+                    <button type="button" class="sintoma-btn">+ Diarrea</button>
+                    <button type="button" class="sintoma-btn">+ Dolor abdominal</button>
+                    <button type="button" class="sintoma-btn">+ Mareos</button>
+                    <button type="button" class="sintoma-btn">+ Dificultad para respirar</button>
+                    <button type="button" class="sintoma-btn">+ Dolor en el pecho</button>
+                    <button type="button" class="sintoma-btn">+ Dolor muscular</button>
+                    <button type="button" class="sintoma-btn">+ Pérdida de apetito</button>
+                    <button type="button" class="sintoma-btn">+ Escalofríos</button>
+                </div>
+            </div>
+            <div class="sintoma-personalizado">
+                <label>Agregar Síntoma Personalizado</label>
+                <div class="personalizado-input">
+                    <input type="text" placeholder="Describe el síntoma">
+                    <button type="button" class="agregar-btn">Agregar</button>
+                </div>
+            </div>
+            <button type="button" class="evaluar-btn">Evaluar Síntomas</button>
+        </section>
+    </div>
+
+    <script src="js/lobby.js"></script>
+</body>
+
+</html>

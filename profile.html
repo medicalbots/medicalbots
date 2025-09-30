@@ -21,33 +21,51 @@
     </header>
 
     <main class="container">
+        <!-- Barra lateral -->
         <aside class="sidebar">
             <button data-target="personal" onclick="mostrarSeccion('personal')">Información Personal</button>
             <button data-target="medica" onclick="mostrarSeccion('medica')">Información Médica</button>
             <button data-target="actividad" onclick="mostrarSeccion('actividad')">Actividad</button>
         </aside>
 
+        <!-- Sección Información Personal -->
         <section id="personal" class="content">
             <h3>Información Personal</h3>
             <form>
                 <div class="form-grid">
                     <div>
-                        <label>Nombre completo</label>
-                        <input type="text" value="...">
+                        <label>Nombres</label>
+                        <input type="text" value="Rothman Moisés">
                     </div>
                     <div>
-                        <label>Correo electronico</label>
-                        <input type="text" value="...">
-                    </div>
-                    <div>
-                        <label>Teléfono</label>
-                        <input type="text" value="8888 8888">
+                        <label>Apellidos</label>
+                        <input type="text" value="Garibo Picado">
                     </div>
                 </div>
                 <div class="form-grid">
                     <div>
+                        <label>Correo electrónico</label>
+                        <input type="text" value="garibopicadorothmanmoises@gmail.com">
+                    </div>
+                    <div>
+                        <label>Teléfono</label>
+                        <input type="text" value="0000 0000">
+                    </div>
+                </div>
+                <div class="form-grid">
+                    <div>
+                        <label>Cédula</label>
+                        <input type="text" value="">
+                    </div>
+                    <div>
                         <label>Fecha de nacimiento</label>
                         <input type="date" value="01/01/2000">
+                    </div>
+                </div>
+                <div class="form-grid">
+                    <div>
+                        <label>Dirección</label>
+                        <input type="text" value="...">
                     </div>
                     <div>
                         <label>Género</label>
@@ -56,10 +74,6 @@
                             <option>Masculino</option>
                         </select>
                     </div>
-                </div>
-                <div>
-                    <label>Dirección</label>
-                    <input type="text" value="...">
                 </div>
                 <h4>Contacto de Emergencia</h4>
                 <div class="form-grid">
@@ -71,15 +85,12 @@
                         <label>Teléfono</label>
                         <input type="text" value=".">
                     </div>
-                    <div>
-                        <label>Relación</label>
-                        <input type="text" value=".">
-                    </div>
                 </div>
                 <button type="submit" class="save-btn">Guardar Cambios</button>
             </form>
         </section>
 
+        <!-- Sección Información Médica -->
         <section id="medica" class="content" style="display:none;">
             <h3>Información Médica</h3>
             <form>
@@ -173,6 +184,7 @@
             </form>
         </section>
 
+        <!-- Sección Actividad -->
         <section id="actividad" class="content" style="display:none;">
             <h3>Resumen de Actividad</h3>
 

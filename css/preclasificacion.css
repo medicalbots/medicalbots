@@ -1,0 +1,173 @@
+body {
+	font-family: 'Segoe UI', Arial, sans-serif;
+	background: #fafbfc;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	max-width: 800px;
+	margin: 32px auto;
+	padding: 0 16px;
+}
+
+.preclasificacion-header {
+	margin-top: 80px;
+}
+
+header {
+	margin-bottom: 16px;
+	text-align: left;
+}
+
+.icon-title {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.shield-icon {
+	font-size: 2rem;
+	color: #2ecc40;
+}
+
+h1 {
+	font-size: 2.2rem;
+	font-weight: 700;
+	margin: 0;
+}
+
+.subtitle {
+	color: #555;
+	font-size: 1.1rem;
+	margin-top: 4px;
+}
+
+.card {
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+	padding: 24px;
+	margin-bottom: 24px;
+	border: 1px solid #eee;
+}
+
+.info-fields {
+	display: flex;
+	gap: 16px;
+	margin-bottom: 16px;
+}
+
+.field {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	min-width: 0;
+}
+
+.field label {
+	font-weight: 500;
+	margin-bottom: 4px;
+}
+
+.field input,
+.field select,
+.field textarea {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	font-size: 1rem;
+	outline: none;
+	background: #fafbfc;
+	margin-bottom: 0;
+}
+
+.field.full-width {
+	margin-top: 12px;
+}
+
+.field textarea {
+	resize: vertical;
+	min-height: 48px;
+	max-height: 120px;
+}
+
+.sintomas-comunes label,
+.sintoma-personalizado label {
+	font-weight: 500;
+	margin-bottom: 6px;
+	display: block;
+}
+
+.sintomas-lista {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 12px;
+}
+
+.sintoma-btn {
+	background: #f5f6fa;
+	border: 1px solid #d1d5db;
+	border-radius: 8px;
+	padding: 6px 16px;
+	font-size: 1rem;
+	color: #222;
+	cursor: pointer;
+	transition: background 0.2s, box-shadow 0.2s;
+}
+.sintoma-btn:hover {
+	background: #e3e7ed;
+	box-shadow: 0 2px 6px rgba(44,204,64,0.08);
+	border-color: #2ecc40;
+}
+
+.sintoma-personalizado {
+	margin-bottom: 16px;
+}
+
+.personalizado-input {
+	display: flex;
+	gap: 8px;
+	margin-top: 4px;
+}
+
+.personalizado-input input {
+	flex: 1;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	font-size: 1rem;
+	background: #fafbfc;
+}
+
+.agregar-btn {
+	background: #888;
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	padding: 8px 18px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+.agregar-btn:hover {
+	background: #2ecc40;
+}
+
+.evaluar-btn {
+	width: 100%;
+	background: #888;
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	padding: 12px 0;
+	font-size: 1.1rem;
+	font-weight: 500;
+	cursor: pointer;
+	margin-top: 8px;
+	transition: background 0.2s;
+}
+.evaluar-btn:hover {
+	background: #2ecc40;
+}

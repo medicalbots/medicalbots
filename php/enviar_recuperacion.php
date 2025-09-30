@@ -7,6 +7,8 @@ if (!$email) {
     die("❌ Debes ingresar un correo.");
 }
 
+
+// Buscar usuario
 $stmt = $conexion->prepare("SELECT ID_Usuarios, Nombres, Apellidos FROM usuarios WHERE Email = ?");
 $stmt->bind_param("s", $email);
 $stmt->execute();
@@ -15,16 +17,20 @@ $resultado = $stmt->get_result();
 if ($resultado->num_rows > 0) {
     $usuario = $resultado->fetch_assoc();
 
+    // Crear token seguro
     $token = bin2hex(random_bytes(32));
     $expira = date("Y-m-d H:i:s", strtotime("+1 hour"));
 
+    // Guardar token en BD
     $stmt = $conexion->prepare("INSERT INTO recuperacion (ID_Usuarios, token, expira) VALUES (?, ?, ?)");
     $stmt->bind_param("iss", $usuario['ID_Usuarios'], $token, $expira);
     $stmt->execute();
 
+    // Crear enlace
     $link = "http://tu-dominio.com/php/reset.php?token=" . $token;
 
 
+    // Enviar correo
     $asunto = "Recuperar contraseña";
     $mensaje = "Hola " . $usuario['Nombres'] . " " . $usuario['Apellidos'] . ",\n\n".
             "Haz clic en el siguiente enlace para restablecer tu contraseña:\n".

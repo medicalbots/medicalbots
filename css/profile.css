@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,6 +6,7 @@ body {
     color: #333;
 }
 
+/* Header */
 .header {
     display: flex;
     align-items: center;
@@ -37,12 +39,14 @@ body {
     color: #059669;
 }
 
+/* Layout */
 .container {
     display: flex;
     padding: 1.5rem;
     gap: 1.5rem;
 }
 
+/* Sidebar */
 .sidebar {
     background: #fff;
     padding: 1rem;
@@ -71,6 +75,7 @@ body {
     font-weight: bold;
 }
 
+/* Content */
 .content {
     flex: 1;
     background: #fff;
@@ -93,7 +98,7 @@ form {
 .form-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
+    gap: 2.2rem 2.5rem; /* más espacio entre columnas y filas */
 }
 
 label {
@@ -115,6 +120,7 @@ h4 {
     margin: 1.5rem 0 0.5rem 0;
 }
 
+/* Botón */
 .save-btn {
     background: #059669;
     color: white;
@@ -130,6 +136,7 @@ h4 {
     background: #047857;
 }
 
+/* Tags (etiquetas de alergias, medicamentos, etc.) */
 .tag-input {
     display: flex;
     gap: 0.5rem;
@@ -180,6 +187,7 @@ h4 {
     color: #c2410c;
 }
 
+/* --- Actividad --- */
 .cards {
     display: flex;
     gap: 1rem;

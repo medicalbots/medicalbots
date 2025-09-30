@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lobby - Asistente Virtual de Salud</title>
     <link rel="stylesheet" href="/css/lobby.css">
+    <link rel="stylesheet" href="/css/chat-bot-medico.css">
 </head>
 
 <body>
+    <!-- Topbar -->
     <header class="topbar">
         <button id="toggle-btn" class="toggle-btn">☰</button>
         <div class="topbar-scroll">
             <div class="topbar-text" style="flex:1; display:flex; justify-content:center; align-items:center;">
-                <span class="title">Asistente de Salud MedicalBots</span>
+                <span class="title solo-pc">Asistente de Salud MedicalBots</span>
             </div>
             <div class="user-info" style="display:flex; justify-content:flex-end; align-items:center;">
                 <div class="profile-container">
@@ -21,33 +23,50 @@
                         <span class="profile-name">Rothman Moises Garibo Picado</span>
                         <span class="profile-email">garibopicadorothmanmoises@gmail.com</span>
                     </div>
-                    <img src="/images/MedicalBots.png" alt="Perfil" class="profile-img" id="profile-img" style="width:40px;height:40px;border-radius:50%;cursor:pointer;">
+                    <img src="images/MedicalBots.png" alt="Perfil" class="profile-img" id="profile-img"
+                        style="width:40px;height:40px;border-radius:50%;cursor:pointer;">
                     <div class="profile-menu" id="profile-menu">
-                        <div class="menu-header">
-                            <span class="profile-name">Rothman Moises Garibo Picado</span><br>
-                            <span class="profile-email">garibopicadorothmanmoises@gmail.com</span>
-                        </div>
-                        <hr>
                         <a href="profile.html" class="menu-item">Perfil</a>
-                        <a href="configure.html" class="menu-item">Configuración</a>
-                        <a href="login.html" class="menu-item">Cerrar sesión</a>
+                        <a href="configure.html" class="menu-item" id="configuracion-menu">Configuración</a>
+                        <a href="login.html" class="menu-item" id="cerrar-sesion-menu">Cerrar sesión</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
+    <!-- Sidebar (oculto por defecto) -->
     <aside class="sidebar" id="sidebar">
         <nav class="menu">
+            <a href="lobby.html">Inicio</a>
             <a href="chatbot.html">Chatbot</a>
-            <a href="preclasificacion">Preclasificación</a>
-            <a href="unidad-cercana.html">Centros de Salud</a>
             <a href="calendario.html">Eventos</a>
-            <a href="datos-personales.html">Información</a>
-            <a href="historial">Mi Actividad</a>
+            <a href="informacion.html">Información</a>
+            <a href="preclasificacion.html">Preclasificación</a>
+            <a href="unidad-cercana.html">Unidad Cercana</a>
+            <a href="historial.html">Mi Actividad</a>
         </nav>
     </aside>
 
+    <!-- Botón flotante del chat con imagen -->
+    <div class="chat-float" id="chatToggle">
+        <img src="/images/MedicalBots.png" alt="Asistente IA">
+    </div>
+
+    <!-- Ventana del chat -->
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <span>MedicalBot</span>
+            <button id="closeChat">✖</button>
+        </div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input">
+            <input type="text" id="chatText" placeholder="Escribe un mensaje...">
+            <button id="sendChat">➤</button>
+        </div>
+    </div>
+
+    <!-- Main content -->
     <div class="main">
         <section class="dashboard">
             <h2>Bienvenido, <span id="profile-name-greeting">Rothman Moises Garibo Picado</span></h2>
@@ -77,17 +96,23 @@
             </div>
 
             <div class="card card-acciones">
-                <h3 style="display:flex;align-items:center;font-size:1.1rem;margin-bottom:18px;"><span style="font-size:22px;margin-right:8px;">➕</span> Acciones Rápidas</h3>
+                <h3 style="display:flex;align-items:center;font-size:1.1rem;margin-bottom:18px;"><span
+                        style="font-size:22px;margin-right:8px;">➕</span> Acciones Rápidas</h3>
                 <div class="quick-actions">
-                    <button class="blue">Nueva Consulta<br><span style="font-size:0.95em;font-weight:normal;">Habla con nuestro asistente</span></button>
-                    <button class="green">Evaluar Síntomas<br><span style="font-size:0.95em;font-weight:normal;">Preclasificación rápida</span></button>
-                    <button class="purple">Buscar Centros<br><span style="font-size:0.95em;font-weight:normal;">Encuentra ayuda cerca</span></button>
-                    <button class="orange">Ver Eventos<br><span style="font-size:0.95em;font-weight:normal;">Jornadas y ferias</span></button>
+                    <button class="nueva-consulta">Nueva Consulta<br><span style="font-size:0.95em;font-weight:normal;">Habla con
+                            nuestro asistente</span></button>
+                    <button class="evaluar-sintomas">Evaluar Síntomas<br><span
+                            style="font-size:0.95em;font-weight:normal;">Preclasificación rápida</span></button>
+                    <button class="centros">Buscar Centros<br><span
+                            style="font-size:0.95em;font-weight:normal;">Encuentra ayuda cerca</span></button>
+                    <button class="ver-eventos">Ver Eventos<br><span style="font-size:0.95em;font-weight:normal;">Jornadas y
+                            ferias</span></button>
                 </div>
             </div>
 
             <div class="card card-actividad">
-                <h3 style="display:flex;align-items:center;font-size:1.1rem;margin-bottom:18px;"><span style="font-size:22px;margin-right:8px;">⏰</span> Actividad Reciente</h3>
+                <h3 style="display:flex;align-items:center;font-size:1.1rem;margin-bottom:18px;"><span
+                        style="font-size:22px;margin-right:8px;">⏰</span> Actividad Reciente</h3>
                 <div class="actividad-lista">
                     <div class="actividad-tarjeta">
                         <div class="actividad-izq">
@@ -133,7 +158,8 @@
         </section>
     </div>
 
-    <script src="/js/lobby.js"></script>
+    <script src="js/lobby.js"></script>
+    <script src="/js/chat-bot-medico.js"></script>
 </body>
 
 </html>

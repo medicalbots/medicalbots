@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente Virtual de Salud</title>
+    <link rel="stylesheet" href="css/lobby.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+</head>
+
+<body>
+
+    <!-- Topbar -->
+    <header class="topbar">
+        <button id="toggle-btn" class="toggle-btn">☰</button>
+        <div class="topbar-scroll">
+            <div class="topbar-text" style="flex:1; display:flex; justify-content:center; align-items:center;">
+                <span class="title solo-pc">Asistente de Salud MedicalBots</span>
+            </div>
+            <div class="user-info" style="display:flex; justify-content:flex-end; align-items:center;">
+                <div class="profile-container">
+                    <div class="profile-details">
+                        <span class="profile-name">Rothman Moises Garibo Picado</span>
+                        <span class="profile-email">garibopicadorothmanmoises@gmail.com</span>
+                    </div>
+                    <img src="images/MedicalBots.png" alt="Perfil" class="profile-img" id="profile-img"
+                        style="width:40px;height:40px;border-radius:50%;cursor:pointer;">
+                    <div class="profile-menu" id="profile-menu">
+                        <a href="profile.html" class="menu-item">Perfil</a>
+                        <a href="configure.html" class="menu-item" id="configuracion-menu">Configuración</a>
+                        <a href="login.html" class="menu-item" id="cerrar-sesion-menu">Cerrar sesión</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar (oculto por defecto) -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <a href="lobby.html">Inicio</a>
+            <a href="chatbot.html">Chatbot</a>
+            <a href="calendario.html">Eventos</a>
+            <a href="informacion.html">Información</a>
+            <a href="preclasificacion.html">Preclasificación</a>
+            <a href="unidad-cercana.html">Unidad Cercana</a>
+            <a href="historial.html">Mi Actividad</a>
+        </nav>
+    </aside>
+
+    <div class="container">
+        <h1>Asistente Virtual de Salud</h1>
+        <p class="sub">Pregúntame sobre salud, síntomas, prevención, hábitos saludables y más. Recuerda que no reemplazo
+            la consulta médica profesional.</p>
+        <div class="faq-box">
+            <h2>Preguntas frecuentes</h2>
+            <div class="faq-grid">
+                <button>¿Cuáles son los síntomas de la gripe?</button>
+                <button>¿Cómo puedo mejorar mi alimentación?</button>
+                <button>¿Qué ejercicios son buenos para principiantes?</button>
+                <button>¿Cuándo debo vacunarme contra la influenza?</button>
+                <button>¿Cuáles son signos de alarma de un infarto?</button>
+            </div>
+        </div>
+        <div class="chat-box">
+            <div id="chatMessages" class="chat-messages">
+                <div class="message bot saludo">
+                    <div class="chat-icon" style="display:flex;justify-content:center;">
+                        <img src="images/MedicalBots.png" alt="Asistente Virtual" style="width:56px;height:56px;border-radius:50%;box-shadow:0 2px 8px #2979FF22;">
+                    </div>
+                    <div style="text-align:center;width:100%;font-size:1.08rem;">
+                        ¡Hola! Soy tu asistente virtual de salud.<br>¿En qué puedo ayudarte hoy?
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-box">
+                <input id="chatText" type="text" placeholder="Escribe tu pregunta sobre salud..">
+                <button id="sendChat" class="send-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 21L23 12L2 3V10L17 12L2 14V21Z" fill="#2979FF" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="js/lobby.js"></script>
+    <script src="js/chat-bot-medico.js"></script>
+
+</body>
+
+</html>

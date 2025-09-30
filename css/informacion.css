@@ -1,0 +1,194 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7f8fa;
+    margin: 0;
+    color: #222;
+}
+.info-container {
+    max-width: 1200px;
+    margin: 70px auto 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+h1 {
+    font-size: 2.2rem;
+    color: #3a3a7c;
+    margin-bottom: 0.2em;
+}
+.subtitle {
+    color: #666;
+    margin-bottom: 1.5em;
+}
+h2 {
+    font-size: 1.3rem;
+    color: #3a3a7c;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+.destacados {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 2em;
+}
+.card {
+    background: #f9fafd;
+    border-radius: 12px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+    padding: 20px;
+    flex: 1;
+    min-width: 260px;
+    position: relative;
+    margin-bottom: 20px;
+    transition: box-shadow 0.2s;
+}
+.card:hover {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+.categoria {
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 4px 12px;
+    margin-bottom: 8px;
+}
+.nutricion .categoria { background: #b6e7c9; color: #1a7c3a; }
+.ejercicio .categoria { background: #b6d6ff; color: #1a4a7c; }
+.prevencion .categoria { background: #ffd6b6; color: #7c4a1a; }
+.vacunacion .categoria { background: #e3d6ff; color: #4a1a7c; }
+.salud-mental .categoria { background: #ffe3f0; color: #7c1a4a; }
+
+.card.destacado {
+    border: 2px solid #3a3a7c;
+}
+.card h3 {
+    margin: 0.5em 0 0.7em 0;
+    font-size: 1.1rem;
+    color: #222;
+}
+.card p {
+    color: #444;
+    font-size: 0.98em;
+    margin-bottom: 0.7em;
+}
+.autor, .fecha {
+    display: inline-block;
+    font-size: 0.85em;
+    color: #888;
+    margin-right: 10px;
+}
+.tags {
+    margin: 10px 0;
+}
+.tags span {
+    display: inline-block;
+    background: #eaeaea;
+    color: #555;
+    border-radius: 6px;
+    padding: 3px 10px;
+    font-size: 0.85em;
+    margin-right: 6px;
+    margin-bottom: 4px;
+}
+.card button {
+    background: #3a3a7c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-size: 0.95em;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+.card button:hover {
+    background: #22225c;
+}
+.sidebar {
+    float: left;
+    width: 260px;
+    margin-right: 32px;
+}
+.categorias, .populares, .vistos {
+    background: #f4f4f8;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 18px;
+}
+.categorias ul, .vistos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.categorias li {
+    padding: 6px 0;
+    font-weight: 500;
+    color: #3a3a7c;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.categorias li:hover {
+    color: #22225c;
+}
+.populares .tags span {
+    background: #d6eaff;
+    color: #1a4a7c;
+}
+.articulos {
+    margin-left: 300px;
+}
+.filtros {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+.filtros input[type="text"] {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+.categorias-filtro button {
+    background: #eaeaea;
+    color: #3a3a7c;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 14px;
+    margin-right: 6px;
+    font-size: 0.95em;
+    cursor: pointer;
+    margin-bottom: 4px;
+    transition: background 0.2s;
+}
+.categorias-filtro button:hover {
+    background: #d6d6ff;
+}
+.listado-articulos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+@media (max-width: 900px) {
+    .info-container {
+        padding: 8px;
+    }
+    .sidebar {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 24px;
+    }
+    .articulos {
+        margin-left: 0;
+    }
+    .destacados {
+        flex-direction: column;
+    }
+    .listado-articulos {
+        grid-template-columns: 1fr;
+    }
+}

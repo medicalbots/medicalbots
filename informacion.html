@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Salud</title>
+    <link rel="stylesheet" href="css/informacion.css">
+    <link rel="stylesheet" href="css/lobby.css">
+</head>
+<body>
+    <header class="topbar">
+        <button id="toggle-btn" class="toggle-btn">☰</button>
+        <div class="topbar-scroll">
+            <div class="topbar-text" style="flex:1; display:flex; justify-content:center; align-items:center;">
+                <span class="title solo-pc">Asistente de Salud MedicalBots</span>
+            </div>
+            <div class="user-info" style="display:flex; justify-content:flex-end; align-items:center;">
+                <div class="profile-container">
+                    <div class="profile-details">
+                        <span class="profile-name">Rothman Moises Garibo Picado</span>
+                        <span class="profile-email">garibopicadorothmanmoises@gmail.com</span>
+                    </div>
+                    <img src="images/MedicalBots.png" alt="Perfil" class="profile-img" id="profile-img"
+                        style="width:40px;height:40px;border-radius:50%;cursor:pointer;">
+                    <div class="profile-menu" id="profile-menu">
+                        <a href="profile.html" class="menu-item">Perfil</a>
+                        <a href="configure.html" class="menu-item" id="configuracion-menu">Configuración</a>
+                        <a href="login.html" class="menu-item" id="cerrar-sesion-menu">Cerrar sesión</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar (oculto por defecto) -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <a href="lobby.html">Inicio</a>
+            <a href="chatbot.html">Chatbot</a>
+            <a href="calendario.html">Eventos</a>
+            <a href="informacion.html">Información</a>
+            <a href="preclasificacion.html">Preclasificación</a>
+            <a href="unidad-cercana.html">Unidad Cercana</a>
+            <a href="historial.html">Mi Actividad</a>
+        </nav>
+    </aside>
+
+    <div class="info-container">
+        <h1>Información de Salud</h1>
+        <p class="subtitle">Artículos educativos y recursos confiables para cuidar tu salud y la de tu familia</p>
+        <h2>🟡 Artículos Destacados</h2>
+        <div class="destacados">
+            <div class="card nutricion">
+                <span class="categoria">Nutrición</span>
+                <h3>Alimentación Saludable: Guía Completa para una Vida Mejor</h3>
+                <p>Una alimentación saludable es fundamental para mantener un estado de salud y prevenir enfermedades...</p>
+                <span class="autor">👩‍⚕️ Dra. María González - Nutricionista</span>
+                <span class="fecha">12 sept</span>
+                <div class="tags">
+                    <span>alimentación</span><span>nutrición</span><span>dieta</span>
+                </div>
+                <button>Leer más →</button>
+            </div>
+            <div class="card ejercicio">
+                <span class="categoria">Ejercicio</span>
+                <h3>Ejercicio Físico: Tu Mejor Medicina Natural</h3>
+                <p>El ejercicio regular es una de las mejores inversiones que puedes hacer para tu salud...</p>
+                <span class="autor">👨‍⚕️ Dr. Carlos Ruiz - Medicina Deportiva</span>
+                <span class="fecha">12 sept</span>
+                <div class="tags">
+                    <span>ejercicio</span><span>actividad física</span><span>deporte</span>
+                </div>
+                <button>Leer más →</button>
+            </div>
+            <div class="card prevencion">
+                <span class="categoria">Prevención</span>
+                <h3>Prevención de Enfermedades: Cuidados Esenciales</h3>
+                <p>La prevención es la mejor estrategia para mantener una buena salud...</p>
+                <span class="autor">👩‍⚕️ Dra. Ana Martínez - Medicina Preventiva</span>
+                <span class="fecha">12 sept</span>
+                <div class="tags">
+                    <span>prevención</span><span>chequeos</span><span>exámenes</span>
+                </div>
+                <button>Leer más →</button>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="categorias">
+                <h3>Categorías</h3>
+                <ul>
+                    <li class="nutricion">Nutrición</li>
+                    <li class="ejercicio">Ejercicio</li>
+                    <li class="prevencion">Prevención</li>
+                    <li class="vacunacion">Vacunación</li>
+                    <li class="salud-mental">Salud Mental</li>
+                </ul>
+            </div>
+            <div class="populares">
+                <h3>Temas Populares</h3>
+                <div class="tags">
+                    <span>Alimentación saludable</span><span>Ejercicio en casa</span><span>Vacunas COVID-19</span><span>Salud cardiovascular</span><span>Diabetes</span><span>Hipertensión</span>
+                </div>
+            </div>
+            <div class="vistos">
+                <h3>Vistos Recientemente</h3>
+                <ul>
+                    <li>Alimentación Saludable: Guía Completa</li>
+                    <li>Ejercicio Físico: Tu Mejor Medicina</li>
+                    <li>Prevención de Enfermedades</li>
+                </ul>
+            </div>
+        </div>
+        <div class="articulos">
+            <div class="filtros">
+                <input type="text" placeholder="Buscar artículos...">
+                <div class="categorias-filtro">
+                    <button>Todas las categorías</button>
+                    <button>Nutrición</button>
+                    <button>Ejercicio</button>
+                    <button>Prevención</button>
+                    <button>Vacunación</button>
+                    <button>Salud Mental</button>
+                </div>
+            </div>
+            <div class="listado-articulos">
+                <div class="card prevencion">
+                    <span class="categoria">Prevención</span>
+                    <h3>Primeros Auxilios: Conocimientos que Pueden Salvar Vidas</h3>
+                    <p>Los primeros auxilios son las medidas inmediatas que se toman para ayudar a una persona lesionada o enferma antes de que llegue ayuda profesional...</p>
+                    <span class="autor">👨‍⚕️ Dr. Roberto Méndez</span>
+                    <span class="fecha">12 sept</span>
+                    <div class="tags">
+                        <span>primeros auxilios</span><span>emergencias</span><span>RCP</span>
+                    </div>
+                    <button>Leer artículo completo →</button>
+                </div>
+                <div class="card ejercicio destacado">
+                    <span class="categoria">Ejercicio</span>
+                    <h3>Ejercicio Físico: Tu Mejor Medicina Natural</h3>
+                    <p>El ejercicio regular es una de las mejores inversiones que puedes hacer para tu salud...</p>
+                    <span class="autor">👨‍⚕️ Dr. Carlos Ruiz</span>
+                    <span class="fecha">12 sept</span>
+                    <div class="tags">
+                        <span>ejercicio</span><span>actividad física</span><span>deporte</span>
+                    </div>
+                    <button>Leer artículo completo →</button>
+                </div>
+                <div class="card prevencion">
+                    <span class="categoria">Prevención</span>
+                    <h3>Prevención de Enfermedades: Cuidados Esenciales</h3>
+                    <p>La prevención es la mejor estrategia para mantener una buena salud...</p>
+                    <span class="autor">👩‍⚕️ Dra. Ana Martínez</span>
+                    <span class="fecha">12 sept</span>
+                    <div class="tags">
+                        <span>prevención</span><span>chequeos</span><span>exámenes</span>
+                    </div>
+                    <button>Leer artículo completo →</button>
+                </div>
+                <div class="card vacunacion">
+                    <span class="categoria">Vacunación</span>
+                    <h3>Vacunación: Protección para Toda la Familia</h3>
+                    <p>Las vacunas son una de las herramientas más efectivas de la medicina preventiva...</p>
+                    <span class="autor">👨‍⚕️ Dr. Luis Herrera</span>
+                    <span class="fecha">12 sept</span>
+                    <div class="tags">
+                        <span>vacunas</span><span>inmunización</span><span>prevención</span>
+                    </div>
+                    <button>Leer artículo completo →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/lobby.js"></script>
+</body>
+</html>
